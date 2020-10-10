@@ -6,6 +6,7 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
+    "logrocket": "^1.0.14",
     "pg": "^8.4.1"
   },
   "scripts": {
