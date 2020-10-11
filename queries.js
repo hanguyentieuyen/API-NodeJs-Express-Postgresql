@@ -1,5 +1,5 @@
 const { request, response } = require('express')
-const { error } = require('logrocket')
+// const { error } = require('logrocket')
 
 const Pool = require('pg').Pool
 
