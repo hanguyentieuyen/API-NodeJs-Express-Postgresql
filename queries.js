@@ -1,8 +1,4 @@
-// const { request, response } = require('express')
-// const { error } = require('logrocket')
-
 const Pool = require('pg').Pool
-
 const pool = new Pool({
   user: 'yen',
   host: 'localhost',
@@ -10,7 +6,6 @@ const pool = new Pool({
   password: 'admin@123',
   port: 5432,
 })
-
 const getUsers = (request, response) => {
   pool.query('SELECT * FROM users ORDER BY id ASC', (error, results) => {
     if (error) {
@@ -38,7 +33,7 @@ const createUser = (request, response) => {
     if (error) {
       throw error
     }
-    response.status(201).send(`User added with ID: ${results.insertId}`)
+    response.status(201).send(`User added with ID: ${result.insertId}`)
   })
 }
 
