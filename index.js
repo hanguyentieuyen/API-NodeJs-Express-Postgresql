@@ -17,9 +17,9 @@ app.use(bodyParser.urlencoded({extended: true,}))
 // app.put('/users/:id', db.updateUser)
 // app.delete('/users/:id', db.deleteUser)
 
-// app.listen(PORT, () => {
-//   console.log(`App running on port ${PORT}.`)
-// })
+app.listen(PORT, () => {
+  console.log(`App running on port ${PORT}.`)
+})
 
 
 const getUsers = (request, response) => {
