@@ -81,7 +81,7 @@ const getUsers = (request, response) => {
   }
 
   app
-  .route('/users')
+  // .route('/users')
   // GET endpoint
   .get(getUsers)
   .get(getUserById)
