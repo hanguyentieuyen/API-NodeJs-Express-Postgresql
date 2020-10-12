@@ -1,4 +1,5 @@
 const Pool = require('pg').Pool
+
 const pool = new Pool({
   user: 'yen',
   host: 'localhost',
@@ -8,7 +9,7 @@ const pool = new Pool({
 })
 
 const getUsers = (request, response) => {
-   pool.query('SELECT * FROM users ORDER BY id ASC', (results) => {
+  pool.query('SELECT * FROM users ORDER BY id ASC', (error, results) => {
     if (error) {
       throw error
     }
@@ -72,4 +73,3 @@ module.exports = {
   updateUser,
   deleteUser,
 }
-

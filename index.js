@@ -1,16 +1,16 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-const app = express()
+const app = express();
 
-const db = require('./queries')
+const db = require('./queries.js')
 
 const PORT = process.env.PORT || 3000;
-
+//package body-parser để truy xuất dữ liệu trong form gửi lên server theo phương thức POST
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true,}))
 
 app.get('/', (request, response) => {
-  response.json({ info: 'Node.js, Express, and Postgres API' })
+  response.json({ info: 'Build local api with Node.js, Express, and Postgres API' })
 })
 
 app.get('/users', db.getUsers)
