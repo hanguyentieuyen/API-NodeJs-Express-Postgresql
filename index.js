@@ -7,6 +7,7 @@ const db = require('./queries.js')
 const PORT = process.env.PORT || 3000;
 //package body-parser để truy xuất dữ liệu trong form gửi lên server theo phương thức POST
 app.use(bodyParser.json())
+//test postman : x-www-form-urlencoded 
 app.use(bodyParser.urlencoded({extended: true,}))
 
 app.get('/', (request, response) => {
